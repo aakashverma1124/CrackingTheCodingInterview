@@ -49,9 +49,9 @@ class SWP4_MaximumNumberOfVowels {
 	
 	public static void main(String[] args) {
 		SWP4_MaximumNumberOfVowels s = new SWP4_MaximumNumberOfVowels();
-		String s = "weallloveyou";
+		String string = "weallloveyou";
 		int k = 7;
-		int ans = s.maxVowels(s, k);
+		int ans = s.maxVowels(string, k);
 		System.out.println(ans);
 	}
 }
