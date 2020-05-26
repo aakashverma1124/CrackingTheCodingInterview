@@ -27,22 +27,6 @@
 */
 
 
-/* Creating a structure for the node.
-   Initializing the nodes datas upon calling its constructor. */
-
-
-class Node {
-	int data;
-	Node left;
-	Node right;
-
-	public Node(int key) {
-		data = key;
-		left = null;
-		right = null;
-	}
-}
-
 class DFS01_GoodNodes {
 
 	/* Creating a root node for the Tree. */
