@@ -30,15 +30,17 @@
 
 class DP02_01Knapsack {
 
+
+/*
 	public static int knapsack(int value[], int weight[], int capacity, int numberOfItems) {	
 		if(numberOfItems == 0 || capacity == 0) {
 			return 0;
 		}
 
-		/* 	
-			If weight of any item is greater than the capacity we'll directly ignore it.
-			therefore, the same function will be called for n - 1 items available in the array.
-		*/
+		 	
+		//	If weight of any item is greater than the capacity we'll directly ignore it.
+		//	therefore, the same function will be called for n - 1 items available in the array.
+		
 		if(weight[numberOfItems - 1] > capacity) {
 			return knapsack(value, weight, capacity, numberOfItems - 1);
 		}
@@ -48,6 +50,45 @@ class DP02_01Knapsack {
 					knapsack(value, weight, capacity, numberOfItems - 1));
 		}
 	}
+
+	But above problem is recursive and may have recomputations.
+	*/
+
+
+	public static int knapsack(int value[], int weight[], int capacity, int numberOfItems) {
+
+		int[][] dp = new int[capacity + 1][numberOfItems + 1];
+
+
+		/* Initializing dp array with -1 */
+		for (int i = 0; i <= capacity; i++) {
+			for (int j = 0; j <= numberOfItems; j++) {
+				dp[i][j] = -1;
+			}
+		}
+
+		/* Base Case */
+		if(numberOfItems == 0 || capacity == 0) {
+			return 0;
+		}
+
+		/* If already available in the array, no need to compute it */
+		if(dp[capacity][numberOfItems] != -1) {
+			return dp[capacity][numberOfItems];
+		}
+	
+		/* Otherwise compute it and save it for further use */
+		if(weight[numberOfItems - 1] > capacity) {
+			return dp[capacity][numberOfItems] = knapsack(value, weight, capacity, numberOfItems - 1);
+		}
+		else {
+			return dp[capacity][numberOfItems] =  Math.max(
+				value[numberOfItems - 1] + knapsack(value, weight, capacity - weight[numberOfItems - 1], numberOfItems - 1),
+					knapsack(value, weight, capacity, numberOfItems - 1));
+		}
+	}
+
+
 
 	public static void main(String[] args) {
 		int value[] = {10, 40, 30, 50};
