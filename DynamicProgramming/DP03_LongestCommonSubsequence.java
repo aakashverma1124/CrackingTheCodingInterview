@@ -22,7 +22,7 @@
 	3
 
 	Explanation: 
-	The first appearance is B, after that the common contiguous element is C, 
+	The first common appearance is B, after that the common contiguous element is C, 
 	and then B again.
 
 	The problem can be solved using Dynamic Programming.
