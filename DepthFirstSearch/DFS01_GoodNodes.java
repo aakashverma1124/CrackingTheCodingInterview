@@ -27,6 +27,18 @@
 */
 
 
+class Node {
+    int data;
+    Node left;
+    Node right;
+
+    public Node(int key) {
+        data = key;
+        left = null;
+        right = null;
+    }
+}
+
 class DFS01_GoodNodes {
 
 	/* Creating a root node for the Tree. */
