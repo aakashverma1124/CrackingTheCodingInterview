@@ -7,7 +7,12 @@
 *	
 *	Example:
 *	
-*	Given binary tree [3,9,20,null,null,15,7],
+*	Given binary tree: [4, 2, 1, 3, 7, 6, 9]
+*	Output: [4, 7, 9, 6, 2, 3, 1]
+*	Note: Above representation is Pre Order:
+* 	If Level Order is given, the answer would be:
+*	Given binary tree: [4, 2, 7, 1, 3, 6, 9]
+*	Output: [4, 7, 2, 9, 6, 3, 1]
 *
 *	Example 1:
 *
@@ -17,15 +22,15 @@
 *		   / \
 *		  2   7
 *		 / \ / \
-*	     1 3 6 9
-*
+*	    	1  3 6  9 
+* 
 *	Output:
 *
 *		    4
 *		   / \
 *		  7   2
 *		 / \ / \
-*	     9 6 3 1
+*	        9  6 3  1
 *
 */
 
