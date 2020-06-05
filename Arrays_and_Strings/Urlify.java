@@ -21,8 +21,7 @@ import java.util.Scanner;
 
 class Urlify 
 { 
-    public static void main(String[] args)  
-    { 
+    public static void main(String[] args) { 
         
         Scanner scan = new Scanner(System.in);
         String str = scan.nextLine();
@@ -33,32 +32,34 @@ class Urlify
           
         // Replace All space (unicode is \\s) to %20, which will give us the required string.
         str = str.replaceAll("\\s", "%20");
+
+        //str = urilfy(str, str.length());
         
         System.out.println(str); 
     } 
-} 
 
 
 
 // Also, we can implement the same using character array also which is actually asked in the problem.
 
-public static String Urilfy(String input, int trueLength) {
-    if(input == null || input == ") {
+public static String urilfy(String input, int trueLength) {
+    if(input == null || input == "") {
        
        input = input.substring(0, trueLength);
        String replacement = "%20";
        StringBuilder builder = new StringBuilder();
        char[] charArray = input.toCharArray();
        
-       for (char c: charArray) {
-           if(c != " ") {
-               builder.append(c);
-           }
-           else {
-               builder.append(replacement);
-           }
+         for (char c: charArray) {
+             if(c != ' ') {
+                 builder.append(c);
+             }
+             else {
+                 builder.append(replacement);
+             }
+         }
        }
-       
+       return builder.toString();
     }       
 }
        
