@@ -33,6 +33,9 @@
 
 
 */
+
+import java.util.*;
+
 class SWP5_LongestSubstringWithKDistinctCharacters {
 
 	public static int findLength(String s, int k) {
