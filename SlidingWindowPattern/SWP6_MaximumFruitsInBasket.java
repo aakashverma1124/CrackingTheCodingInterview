@@ -25,7 +25,7 @@
 	Explanation: We can put 2 'C' in one basket and one 'A' in the other from the subarray {'C', 'A', 'C'}
 
 	Approach: 
-	Same exactly SWP5_LongestSubstringWithKDistinctCharacters.java
+	Same exactly as SWP5_LongestSubstringWithKDistinctCharacters.java
 
 
 */
