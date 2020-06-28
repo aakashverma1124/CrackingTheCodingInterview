@@ -29,6 +29,12 @@
 	Once we find the pair, we'll return the indices as an array.
 	Otherwise, we return [-1. -1].
 
+	Time Complexity:
+	The time complexity of the above algorithm will be O(N), where ‘N’ is the total number of elements in the given array.
+
+	Space Complexity:
+	The space complexity will also be O(N), as, in the worst case, we will be pushing ‘N’ numbers in the HashTable.
+
 
 */
 
