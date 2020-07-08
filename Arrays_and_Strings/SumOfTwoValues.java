@@ -24,6 +24,23 @@
 	1. Use hashing
 	2. Use comparison between elements
 
+	Solution Explanation:
+
+	Time Complexity:
+	The Time complexity of this solution is linear, O(n).
+
+	Space Complexity:
+	The space complexity of this solution is linear, O(n).
+
+
+	Solution Breakdown
+	In this solution, you can use the following algorithm to find a pair that add up to the target (say targetSum).
+
+	Scan the whole array once and store visited elements in a hash set.
+	During scan, for every element a in the array, we check if targetSum - a is present in the hash set i.e. targetSum - a is already visited.
+	If targetSum - a is found in the hash set, it means there is a pair (e, targetSum - a) in array whose sum is equal to the given targetSum.
+	If we have exhausted all elements in the array and didn’t find any such pair, the function will return false.
+
 */
 
 import java.util.*;
