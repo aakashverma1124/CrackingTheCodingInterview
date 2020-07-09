@@ -48,7 +48,7 @@
 
 class FS03_HappyNumber {
 
-	static int findDigitSumSquare(int num) {
+	static int findDigitSquareSum(int num) {
 		int newNumber = 0;
 		while(num != 0) {
 			int rem = num % 10;
@@ -63,8 +63,8 @@ class FS03_HappyNumber {
 		slow = num;
 		fast = num;
 		do {
-			slow = findDigitSumSquare(slow);
-			fast = findDigitSumSquare(findDigitSumSquare(fast));
+			slow = findDigitSquareSum(slow);
+			fast = findDigitSquareSum(findDigitSquareSum(fast));
 		} while(slow != fast);
 
 		if(slow == 1)
